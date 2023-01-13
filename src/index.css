@@ -1,0 +1,8 @@
+* {
+  margin: 0;
+}
+
+canvas {
+  background-color: #000000;
+  min-height: 100vh;
+}
