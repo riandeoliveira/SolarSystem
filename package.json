@@ -1,5 +1,5 @@
 {
-  "name": "react-threejs",
+  "name": "solar-system",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
     "@react-three/cannon": "^6.5.2",
     "@react-three/drei": "^9.51.21",
     "@react-three/fiber": "^8.10.0",
+    "@react-three/postprocessing": "^2.7.0",
     "@types/three": "^0.148.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
