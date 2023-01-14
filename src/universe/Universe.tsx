@@ -5,7 +5,12 @@ import { StarGroup } from "./StarGroup";
 export const Universe = (): JSX.Element => {
   return (
     <>
-      <OrbitControls zoomSpeed={0.5} minDistance={1.1} maxDistance={1600} />
+      <OrbitControls
+        zoomSpeed={0.5}
+        minDistance={1.11}
+        maxDistance={1600}
+        enablePan={false}
+      />
       <SolarSystem />
       <StarGroup />
     </>
