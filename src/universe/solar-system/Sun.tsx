@@ -1,6 +1,5 @@
 import { Sparkles } from "@react-three/drei";
 import { MeshProps, useFrame, useLoader } from "@react-three/fiber";
-import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { useRef } from "react";
 import { Mesh, Texture, TextureLoader } from "three";
 import sunMap from "../../assets/textures/sun-map.jpg";
@@ -16,10 +15,10 @@ export const Sun = (props: SunProps): JSX.Element => {
 
   return (
     <>
-      <ambientLight intensity={1.5} />
-      <EffectComposer>
+      {/* <EffectComposer>
         <Bloom luminanceThreshold={0} />
-      </EffectComposer>
+      </EffectComposer> */}
+      <pointLight intensity={3} position={[10, 0, 0]} />
       <mesh {...props} ref={sunRef}>
         <Sparkles scale={2} count={100} />
         <sphereGeometry args={[1, 100, 100]} />
