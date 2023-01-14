@@ -4,6 +4,7 @@ import { Mars } from "./Mars";
 import { Mercury } from "./Mercury";
 import { Saturn } from "./Saturn";
 import { Sun } from "./Sun";
+import { Uranus } from "./Uranus";
 import { Venus } from "./Venus";
 
 export const SolarSystem = (): JSX.Element => {
@@ -15,7 +16,8 @@ export const SolarSystem = (): JSX.Element => {
       <Earth position={[-20, 0, 0]} />
       <Mars position={[100, 0, 0]} />
       <Jupiter position={[200, 0, 0]} />
-      <Saturn position={[0, 0, 0]} />
+      <Saturn position={[250, 0, 0]} />
+      <Uranus position={[0, 0, 0]} />
     </>
   );
 };
