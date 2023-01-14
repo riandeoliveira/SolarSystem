@@ -1,16 +1,12 @@
-import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
-import { SolarSystem } from "./universe/solar-system/SolarSystem";
-import { StarGroup } from "./universe/StarGroup";
+import { Universe } from "./universe/Universe";
 
 export const App = (): JSX.Element => {
   return (
     <Canvas>
       <Suspense fallback={null}>
-        <OrbitControls />
-        <SolarSystem />
-        <StarGroup />
+        <Universe />
       </Suspense>
     </Canvas>
   );
