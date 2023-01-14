@@ -1,13 +1,17 @@
-import { OrbitControls, Stars } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Sun } from "./celetial-bodies/Sun";
+import { Suspense } from "react";
+import { SolarSystem } from "./universe/solar-system/SolarSystem";
+import { StarGroup } from "./universe/StarGroup";
 
 export const App = (): JSX.Element => {
   return (
     <Canvas>
-      <OrbitControls />
-      <Stars count={10000} depth={100} factor={1} />
-      <Sun />
+      <Suspense fallback={null}>
+        <OrbitControls />
+        <SolarSystem />
+        <StarGroup />
+      </Suspense>
     </Canvas>
   );
 };
