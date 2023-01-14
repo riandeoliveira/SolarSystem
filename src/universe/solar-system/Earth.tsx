@@ -31,12 +31,7 @@ export const Earth = (props: EarthProps): JSX.Element => {
       <mesh {...props}>
         <sphereGeometry args={[1, 100, 100]} />
         <meshPhongMaterial specularMap={specularMap} />
-        <meshStandardMaterial
-          displacementScale={0.2}
-          map={colorMap}
-          metalness={0.7}
-          roughness={0.5}
-        />
+        <meshStandardMaterial map={colorMap} metalness={0.7} roughness={0.5} />
       </mesh>
     </>
   );
