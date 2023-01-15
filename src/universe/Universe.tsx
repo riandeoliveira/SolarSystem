@@ -1,5 +1,6 @@
 import { OrbitControls } from "@react-three/drei";
-import { SolarSystem } from "./solar-system/SolarSystem";
+import { Mercury } from "./solar-system/planets/Mercury";
+import { Sun } from "./solar-system/stars/Sun";
 import { StarGroup } from "./StarGroup";
 
 export const Universe = (): JSX.Element => {
@@ -11,7 +12,9 @@ export const Universe = (): JSX.Element => {
         maxDistance={1600}
         enablePan={false}
       />
-      <SolarSystem />
+      <Sun position={[0, 0, 0]} />
+      <Mercury position={[40, 0, 0]} />
+      {/* <SolarSystem /> */}
       <StarGroup />
     </>
   );
