@@ -1,11 +1,11 @@
 import { MeshProps, useLoader } from "@react-three/fiber";
 import { Texture, TextureLoader } from "three";
-import uranusMap from "../../assets/textures/uranus-map.jpg";
+import neptuneMap from "../../../assets/textures/neptune-map.jpg";
 
-interface UranusProps extends MeshProps {}
+interface NeptuneProps extends MeshProps {}
 
-export const Uranus = (props: UranusProps): JSX.Element => {
-  const colorMap: Texture = useLoader(TextureLoader, uranusMap);
+export const Neptune = (props: NeptuneProps): JSX.Element => {
+  const colorMap: Texture = useLoader(TextureLoader, neptuneMap);
 
   return (
     <mesh {...props}>

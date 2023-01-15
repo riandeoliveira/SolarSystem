@@ -2,7 +2,7 @@ import { Sparkles } from "@react-three/drei";
 import { MeshProps, useFrame, useLoader } from "@react-three/fiber";
 import { useRef } from "react";
 import { Mesh, Texture, TextureLoader } from "three";
-import sunMap from "../../assets/textures/sun-map.jpg";
+import sunMap from "../../../assets/textures/sun-map.jpg";
 
 interface SunProps extends MeshProps {}
 

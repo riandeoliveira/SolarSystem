@@ -1,9 +1,9 @@
 import { MeshProps, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import { DoubleSide } from "three/src/constants";
-import earthCloudsMap from "../../assets/textures/earth/clouds-map.jpg";
-import earthDayMap from "../../assets/textures/earth/day-map.jpg";
-import earthSpecularMap from "../../assets/textures/earth/specular-map.jpg";
+import earthCloudsMap from "../../../assets/textures/earth/clouds-map.jpg";
+import earthDayMap from "../../../assets/textures/earth/day-map.jpg";
+import earthSpecularMap from "../../../assets/textures/earth/specular-map.jpg";
 
 interface EarthProps extends MeshProps {}
 

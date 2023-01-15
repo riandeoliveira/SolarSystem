@@ -1,11 +1,11 @@
 import { MeshProps, useLoader } from "@react-three/fiber";
 import { Texture, TextureLoader } from "three";
-import jupiterMap from "../../assets/textures/jupiter-map.jpg";
+import saturnMap from "../../../assets/textures/saturn-map.jpg";
 
-interface JupiterProps extends MeshProps {}
+interface SaturnProps extends MeshProps {}
 
-export const Jupiter = (props: JupiterProps): JSX.Element => {
-  const colorMap: Texture = useLoader(TextureLoader, jupiterMap);
+export const Saturn = (props: SaturnProps): JSX.Element => {
+  const colorMap: Texture = useLoader(TextureLoader, saturnMap);
 
   return (
     <mesh {...props}>

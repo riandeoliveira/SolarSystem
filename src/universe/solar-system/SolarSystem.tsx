@@ -1,12 +1,12 @@
-import { Earth } from "./Earth";
-import { Jupiter } from "./Jupiter";
-import { Mars } from "./Mars";
-import { Mercury } from "./Mercury";
-import { Neptune } from "./Neptune";
-import { Saturn } from "./Saturn";
-import { Sun } from "./Sun";
-import { Uranus } from "./Uranus";
-import { Venus } from "./Venus";
+import { Earth } from "./planets/Earth";
+import { Jupiter } from "./planets/Jupiter";
+import { Mars } from "./planets/Mars";
+import { Mercury } from "./planets/Mercury";
+import { Neptune } from "./planets/Neptune";
+import { Saturn } from "./planets/Saturn";
+import { Uranus } from "./planets/Uranus";
+import { Venus } from "./planets/Venus";
+import { Sun } from "./stars/Sun";
 
 export const SolarSystem = (): JSX.Element => {
   return (
