@@ -1,21 +1,19 @@
-import { OrbitControls } from "@react-three/drei";
-import { Mercury } from "./solar-system/planets/Mercury";
-import { Sun } from "./solar-system/stars/Sun";
-import { StarGroup } from "./StarGroup";
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { useSelector } from "react-redux/es/exports";
+import { selectCameraTarget } from "../redux/solar-system/selectors";
 
-export const Universe = (): JSX.Element => {
+interface UniverseProps {
+  children: JSX.Element | JSX.Element[];
+}
+
+export const Universe = ({ children }: UniverseProps): JSX.Element => {
+  const target: number[] = useSelector(selectCameraTarget);
+
   return (
     <>
-      <OrbitControls
-        zoomSpeed={0.5}
-        minDistance={1.11}
-        maxDistance={1600}
-        enablePan={false}
-      />
-      <Sun position={[0, 0, 0]} />
-      <Mercury position={[40, 0, 0]} />
-      {/* <SolarSystem /> */}
-      <StarGroup />
+      {/* <ambientLight /> */}
+      {/* <OrbitControls zoomSpeed={1} enablePan={false} target={target as any} /> */}
+      {children}
     </>
   );
 };
