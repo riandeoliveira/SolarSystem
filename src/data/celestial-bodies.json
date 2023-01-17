@@ -1,0 +1,51 @@
+{
+  "sun": {
+    "radius": 696340000,
+    "distance": 0,
+    "texture": "/src/assets/textures/sun-map.jpg"
+  },
+  "mercury": {
+    "radius": 2439700,
+    "distance": 57910000000,
+    "texture": "/src/assets/textures/mercury-map.jpg"
+  },
+  "venus": {
+    "radius": 6051800,
+    "distance": 108200000000,
+    "texture": "/src/assets/textures/venus-map.jpg"
+  },
+  "earth": {
+    "radius": 6378100,
+    "distance": 149600000000,
+    "texture": {
+      "clouds": "/src/assets/textures/earth/clouds-map.jpg",
+      "day": "/src/assets/textures/earth/day-map.jpg",
+      "specular": "/src/assets/textures/earth/specular-map.jpg"
+    }
+  },
+  "mars": {
+    "radius": 3389500,
+    "distance": 227940000000,
+    "texture": "/src/assets/textures/mars-map.jpg"
+  },
+  "jupiter": {
+    "radius": 69911000,
+    "distance": 778330000000,
+    "texture": "/src/assets/textures/jupiter-map.jpg"
+  },
+  "saturn": {
+    "radius": 58232000,
+    "distance": 1429400000000,
+    "texture": "/src/assets/textures/saturn-map.jpg"
+  },
+  "uranus": {
+    "radius": 25362000,
+    "distance": 2870990000000,
+    "texture": "/src/assets/textures/uranus-map.jpg"
+  },
+  "neptune": {
+    "radius": 24622000,
+    "distance": 4504300000000,
+    "texture": "/src/assets/textures/neptune-map.jpg"
+  }
+}
