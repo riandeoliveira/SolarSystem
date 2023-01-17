@@ -14,9 +14,9 @@ const { fov, aspect, near, far } = cameraProps;
 
 export const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
-camera.position.x = 149600000000;
+camera.position.x = 150600000000;
 
 export const controls = new OrbitControls(camera, renderer.domElement);
 
 controls.enableDamping = true;
-controls.target = new Vector3(149600000000, 0, 0);
+controls.target = new Vector3(150600000000, 0, 0);
