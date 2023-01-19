@@ -1,30 +1,33 @@
+import { SelectiveUnrealBloomPass } from "@visualsource/selective-unrealbloompass";
 import * as THREE from "three";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
-import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
-import { camera } from "../camera-controls/camera-controls";
+import { camera } from "../camera";
+import { sunMesh } from "../celestial-bodies/sun";
 import { renderer } from "../render";
-import { scene } from "../scene/scene";
+import { scene } from "../scene";
 
 export const composer = new EffectComposer(renderer);
 const renderPass = new RenderPass(scene, camera);
 
-composer.addPass(renderPass);
+export const BLOOM = 1;
 
-const unrealBloomPassProps = {
-  resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),
-  strength: 1.5,
-  radius: 0.1,
-  threshold: 0.1,
-};
+// setup renderer, camera, scene, etc
 
-const { resolution, strength, radius, threshold } = unrealBloomPassProps;
+camera.layers.enable(BLOOM);
 
-const unrealBloomPass = new UnrealBloomPass(
-  resolution,
-  strength,
-  radius,
-  threshold
+const bloomPass = new SelectiveUnrealBloomPass(
+  new THREE.Vector2(window.innerWidth, window.innerHeight),
+  1.5,
+  0.1,
+  0.1,
+  true,
+  BLOOM,
+  scene,
+  camera
 );
 
-composer.addPass(unrealBloomPass);
+composer.addPass(renderPass);
+composer.addPass(bloomPass);
+
+sunMesh.layers.set(BLOOM);

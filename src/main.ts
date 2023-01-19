@@ -1,21 +1,27 @@
-import "./background/background";
-import { controls } from "./camera-controls/camera-controls";
-import "./celestial-bodies/planets/earth";
-import "./celestial-bodies/planets/jupiter";
-import "./celestial-bodies/planets/mars";
-import "./celestial-bodies/planets/mercury";
-import "./celestial-bodies/planets/neptune";
-import "./celestial-bodies/planets/saturn";
-import "./celestial-bodies/planets/uranus";
-import "./celestial-bodies/planets/venus";
-import "./celestial-bodies/stars/sun";
+import { camera, controls } from "./camera";
+import { sunMesh } from "./celestial-bodies/sun";
 import { composer } from "./effects";
-import "./lights";
+import { sunAmbientLight } from "./lights";
+import { physics } from "./physics";
+import { scene } from "./scene";
 
 function animate(): void {
   requestAnimationFrame(animate);
 
   controls.update();
+  physics.update();
+
+  if (
+    camera.position.x >= 50000000000 ||
+    camera.position.y >= 50000000000 ||
+    camera.position.z >= 50000000000
+  ) {
+    scene.remove(sunMesh);
+    scene.remove(sunAmbientLight);
+  } else {
+    scene.add(sunMesh);
+    scene.add(sunAmbientLight);
+  }
 
   composer.render();
 }

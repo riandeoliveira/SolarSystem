@@ -14,6 +14,7 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
+    "@visualsource/selective-unrealbloompass": "^1.0.1",
     "three": "^0.148.0"
   }
 }
