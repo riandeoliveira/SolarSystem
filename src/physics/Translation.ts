@@ -12,7 +12,7 @@ export class Translation {
   public translate(): void {
     let orbitRadius = this.distance;
     let currentDate = Date.now();
-    let date = currentDate * this.velocity
+    let date = currentDate * this.velocity;
 
     this.planetMesh.position.set(
       Math.cos(date) * orbitRadius,
